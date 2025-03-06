@@ -16,7 +16,7 @@ window.addEventListener("load", () => { // waits until the page is loaded to run
   const initiateCookie = () => {
     try {
       getCookie = function(name) { // verify if the cookie exists, if the cookie doesn't exist or the mastertag is not installed, it will return 'No Cookie Found' into the console. Please change this logic if you want to have something different 
-      var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+      let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
       if (match) {
         appendCookie(JSON.parse(match[2]).clickId);
       } else {
